@@ -105,6 +105,11 @@ else()
   endforeach(flag_var)
 endif()
 
+# --- [ Eigen fails to build without this
+if(APPLE)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-invalid-partial-specialization")
+endif()
+
 if(NOT APPLE AND UNIX)
   list(APPEND Caffe2_DEPENDENCY_LIBS dl)
 endif()
