@@ -10,6 +10,7 @@ This build is confirmed for:
 ### Required Dependencies
 
 ```bash
+
 sudo apt-get update
 sudo apt-get install -y --no-install-recommends \
       build-essential \
